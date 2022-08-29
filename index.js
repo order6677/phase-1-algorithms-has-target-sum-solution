@@ -1,7 +1,9 @@
-function hasTargetSum(array, target) {
-  // Write your algorithm here
-}
 
+  // Write your algorithm here
+
+// make a function `hasTargetSum` that check if two numbers from the array
+// adds up to some target if i have an array [1,2,3,4]
+// and the target is 6i shoud return true because 2 and 4 add to 6
 /* 
   Write the Big O time complexity of your function here
 */
@@ -13,6 +15,20 @@ function hasTargetSum(array, target) {
 /*
   Add written explanation of your solution here
 */
+function hasTargetSum(array, target) {
+
+  for (let i = 0; i< array.length; i++){
+    const complement = target - array[i]
+    for (let j = i+1;j< array.length; j++){
+
+      if (array[j]=== complement)return true
+    }
+  }
+
+  return false;
+}
+
+
 
 // You can run `node index.js` to view these console logs
 if (require.main === module) {
